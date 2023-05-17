@@ -6,9 +6,15 @@ choices = {
     "scissors": {"beats": "paper", "loses_to": "rock"}
 }
 
+beat_choices = {
+    "rock": ["scissors"],
+    "paper": ["rock"],
+    "scissors": ["paper"]
+}
 
-def get_computer_choice(my_choice):
-    computer_choice = random.choice(list(choices.keys()))
+
+def get_computer_choice():
+    computer_choice = random.choice(list(beat_choices.keys()))
     return computer_choice
 
 
@@ -20,18 +26,15 @@ def play_round():
     print("Welcome to Rock, Paper, Scissors!")
 
     player_choice = get_player_choice()
-    computer_choice = get_computer_choice(player_choice)
+    computer_choice = get_computer_choice()
 
     print("You chose", player_choice)
     print("The computer chose", computer_choice)
 
     if player_choice == computer_choice:
-        print("Tie!")
-    elif choices[player_choice]["beats"] == computer_choice:
-        print("You win!")
+        return "Tie!"
+    elif computer_choice in beat_choices[player_choice]:
+        return "You win!"
     else:
-        print("You lose!")
-
-        # Display the choices and the winner
-    print(f"You chose {player_choice}, and the computer chose {computer_choice}.")
+        return "Computer wins!"
 
