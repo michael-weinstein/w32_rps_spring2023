@@ -19,5 +19,4 @@ def play_game() -> str:
     player_throw = input('rock, paper, or scissors?: ')
     computer_throw = random.choice(list(rule_dict.keys()))
     print('computer: ' + computer_throw)
-    outcome = determine_winner(player_throw, computer_throw, rule_dict)
-    return(outcome)
+    return(determine_winner(player_throw, computer_throw, rule_dict))
