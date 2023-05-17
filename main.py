@@ -1,4 +1,4 @@
-import rpsSupport
+import play_game
 
 if __name__=='__main__':
     num_games = input('Enter number of games to play: ')
@@ -10,3 +10,4 @@ if __name__=='__main__':
             print('Computer wins')
         else:
             print('Tie')
+            
