@@ -16,20 +16,3 @@ def play_game(player_throw:str, computer_throw:str, rule_dict:dict) -> str:
         return('C')
     else:
         return('T')
-
-if __name__=='__main__':
-    while True:
-        player_throw = input('rock, paper, or scissors?: ')
-        computer_throw = random.choice(list(rule_dict.keys()))
-        print('computer: ' + computer_throw)
-        outcome = play_game(player_throw, computer_throw, rule_dict)
-        if outcome=='P':
-            print('Player Wins')
-            break
-        elif outcome=='C':
-            print('Computer Wins')
-            break
-        elif outcome=='T':
-            print('Tie, Throw Again')
-        else:
-            print('Player Throw Invalid, Try Again')
