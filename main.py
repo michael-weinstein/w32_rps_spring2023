@@ -1,9 +1,9 @@
-import play_game
+import rpsSupport
 
 if __name__=='__main__':
-    num_games = input('Enter number of games to play: ')
+    num_games = int(input('Enter number of games to play: '))
     for i in range(num_games):
-        outcome = play_game()
+        outcome = rpsSupport.play_game.play_game()
         if outcome == 'P':
             print('Player wins')
         elif outcome == 'C':
