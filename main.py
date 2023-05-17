@@ -8,6 +8,8 @@ if __name__=='__main__':
             print('Player wins')
         elif outcome == 'C':
             print('Computer wins')
-        else:
+        elif outcome == 'T':
             print('Tie')
+        else:
+            print('Player Throw Invalid')
             
