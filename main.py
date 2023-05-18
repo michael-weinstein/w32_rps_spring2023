@@ -13,7 +13,7 @@ def playARound():
         print('Player Throw Invalid')
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     num_games = int(input('Enter number of games to play: '))
     for i in range(num_games):
         playARound()
